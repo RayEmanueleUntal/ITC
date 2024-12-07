@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITC Website - Income Tax Calculator</title>
+    <link rel="stylesheet" href="../css/incomeTaxCalculator.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+
+    <header>
+        <nav class="navbar">
+            <ul class="navbar-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li>
+                    <a href="#" class="dropdown-toggle" id="assignments-toggle"><b>Assignments</b></a>
+                    <ul class="dropdown-menu" id="assignments-menu">
+                        <div class="dropdown-menu-space"></div>
+                        <div class="dropdown-menu-items">
+                            <li><a href="../html/conversionCalculator.html">Conversion Calculator</a></li>
+                            <li><a href="../html/incomeTaxCalculator.html">Income Tax Calculator</a></li>
+                            <li><a href="../html/fact_Sum_AvgCalculator.html">Factorial, Sum & Average</a></li>
+                            <li><a href="../html/simplePayrollSystem.html">Simple Payroll System</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Title Section -->
+
+     <div class="title-container">
+        <h1>Income Tax Calculator</h1>
+     </div>
+
+    <!-- Main Content Section -->
+
+     <div class="content-container">
+
+        <div class="pneumorphic-section" id="input-section">
+            <h4>Enter Your Income</h4>
+            <div class="input-container">
+                <span>₱</span>
+                <input type="number" id="income-input" name="income" value="0">
+            </div>
+            <button class="operation-button" id="calculate-button">Calculate</button>
+            <button class="operation-button" id="clear-button">Clear</button>
+        </div>
+
+        <div class="pneumorphic-section" id="output-section">
+            <h2>Your Income Tax is <b>₱ <span id="tax-output-value">0.00</span></b></h2>
+            <h4>Income Tax Table</h4>
+            <table id="tax-table">
+                <tr>
+                    <th>Amount of Net Taxable Income</th>
+                    <th>Amount of Basic Tax + Rate</th>
+                </tr>
+
+                <tr>
+                    <td>₱ 250,000 and Below</td>
+                    <td>0 %</td>
+                </tr>
+
+                <tr>
+                    <td>Above ₱ 250,000 to ₱ 400,000</td>
+                    <td>20 % of excess over ₱ 250,000</td>
+                </tr>
+
+                <tr>
+                    <td>Above ₱ 400,000 to ₱ 800,000</td>
+                    <td>₱ 30,000 + 25 % of excess over ₱ 400,000</td>
+                </tr>
+
+                <tr>
+                    <td>Above ₱ 800,000 to ₱ 2,000,000</td>
+                    <td>₱ 130,000 + 30 % of excess over ₱ 800,000</td>
+                </tr>
+
+                <tr>
+                    <td>Above ₱ 2,000,000 to ₱ 8,000,000</td>
+                    <td>₱490,000 + 32 % of excess over ₱ 2,000,000</td>
+                </tr>
+
+                <tr>
+                    <td>Above ₱ 8,000,000</td>
+                    <td>₱ 2,410,000 + 35 % of excess over ₱ 8,000,000</td>
+                </tr>
+            </table>
+        </div>
+
+     </div>
+
+     <script src="../js/incomeTaxCalculator.js"></script>
+    
+</body>
+</html>
