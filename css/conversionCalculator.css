@@ -1,0 +1,226 @@
+/* Hide arrows in Chrome, Safari, and Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide arrows in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+/* General page styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    overflow-x: hidden;
+    font-size: 16px;
+    background: #e7e8ed;
+    height: 100%;
+}
+
+button, input {
+    font-family: 'Montserrat';
+}
+
+/* Navbar */
+
+.navbar {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 20px;
+    padding-block: 5px;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-menu, .navbar li {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin-right: 40px;
+    padding: 0;
+}
+
+.navbar li {
+    position: relative;
+    width: auto;
+}
+
+.navbar a {
+    color: #5e4b96;
+    display: block;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+/* Dropdown Menu */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    width: 220px;
+    padding: 100px;
+}
+
+.dropdown-menu-space {
+    height: 30px;
+}
+
+.dropdown-menu-items {
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(12px); 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); 
+}
+
+.navbar-menu li:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    color: #778086;
+    font-size: 16px;
+    text-align: left;
+    transition: background 0.3s, color 0.3s ease;
+    display: block;
+    margin: 0;
+    padding: 20px;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(94, 75, 150, 0.15); /* Soft hover effect */
+    color: #5e4b96;
+}
+
+
+/* Title Section */
+
+.title-container {
+    width: 100vw;
+    margin-top: 150px;
+    text-align: center;
+    justify-content: center;
+}
+
+.title-container h1 {
+    font-style: bold;
+    font-size: 3.5rem;
+    background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.title-container h1:hover {
+    background: linear-gradient(to left, #f32170, #ff6b08,#cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+
+/* Main Content */
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    column-gap: 8%;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+
+.pneumorphic-section {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-inline: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 30vw;
+}
+
+.pneumorphic-section h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#temperature-converter-section h3 {
+    color: #6910f8;
+}
+
+#measurement-converter-section h3 {
+    color: #d40f72;
+}
+
+.pneumorphic-section h5 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #9fa5b6;
+}
+
+.input-container {
+    display: flex;
+    justify-self: center;
+    justify-content: space-between;
+    align-items: center;
+    color: #a3a6b6;
+    width: 50%;
+    border-radius: 18px;
+    padding-block: 10px;
+    padding-inline: 25px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 
+    inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2),
+    -7px -7px 20px 0 rgba(255, 255, 255, 0),
+    7px 7px 20px 0 rgba(0, 0, 0, 0);  
+    transition: box-shadow 0.5s ease;
+}
+
+.input-container:hover {
+    box-shadow: 
+    inset -7px -7px 20px 0 rgba(255, 255, 255, 0),
+    inset 7px 7px 20px 0 rgba(0, 0, 0, 0),
+    -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2);  
+}
+
+.input-container input {
+    outline: none;
+    border-width: 0;
+    font-size: 1.5rem;
+    background: none;
+    color: #a3a6b6;
+    width: auto;
+    max-width: 90%; 
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITC Website</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    
+  <!-- Navbar -->
+
+    <header>
+        <nav class="navbar">
+            <ul class="navbar-menu">
+                <li><a href="#front"><b>Home</b></a></li>
+                <li>
+                    <a href="#" class="dropdown-toggle" id="assignments-toggle">Assignments</a>
+                    <ul class="dropdown-menu" id="assignments-menu">
+                        <div class="dropdown-menu-space"></div>
+                        <div class="dropdown-menu-items">
+                            <li><a href="html/conversionCalculator.html">Conversion Calculator</a></li>
+                            <li><a href="html/incomeTaxCalculator.html">Income Tax Calculator</a></li>
+                            <li><a href="html/fact_Sum_AvgCalculator.html">Factorial, Sum & Average</a></li>
+                            <li><a href="html/simplePayrollSystem.html">Simple Payroll System</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li><a href="html/about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- ADDU Background Image -->
+    <div class="backgroundImage"></div>
+
+    <!-- Title Section -->
+    <div class="front" id="front">
+        <div class="front-content">
+            <h4>CS 1130 - Introduction to Computing</h4>
+            <!-- <h1> <span id="my-itc">My ITC</span><br>Website<br>Assignment</h1> -->
+            <h1><span id="my-itc">My ITC</span> Website Assignment</h1>
+            <h5>This website showcases the assignments for CS 1130 - Introduction to Computing,
+                as part of the first-semester coursework at Ateneo de Davao University. It contains
+                various exercises demonstrating basic concepts in HTML, CSS, and JavaScript.</h5>
+            <a class="get-started-btn" id="front-get-started-btn" href="#content">Get Started</a>
+        </div>
+        <a id="down-arrow" href="#content"><i class="material-icons" id="icon-down-arrow">keyboard_arrow_down</i></a>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="content" id="content">
+
+        <a class="assignment-btn" id="conversionCalcBTN" href="html/conversionCalculator.html">
+            <i class="material-icons">device_thermostat</i>
+            <div class="assignment-labels">
+                <h2>conversion calculator</h2>
+                <h4>A simple tool for converting units like Celsius to Fahrenheit and Meters to Feet.</h4>
+            </div>
+        </a>
+
+        <a class="assignment-btn" id="incomeTaxCalcBTN" href="html/conversionCalculator.html">
+            <i class="material-icons">attach_money</i>
+            <div class="assignment-labels">
+                <h2>income tax calculator</h2>
+                <h4>A calculator that computes income tax based on user input.</h4>
+            </div>
+        </a>
+
+        <a class="assignment-btn" id="factSumAvgCalcBTN" href="html/fact_Sum_AvgCalculator.html">
+            <i class="material-icons">calculate</i>
+            <div class="assignment-labels">
+                <h2>factorial, sum, & average calculator</h2>
+                <h4>Calculates the factorial, sum, and average of numbers using loops.</h4>
+            </div>
+        </a>
+
+        <a class="assignment-btn" id="simplePayrollSysBTN" href="html/simplePayrollSystem.html">
+            <i class="material-icons">calendar_today</i>
+            <div class="assignment-labels">
+                <h2>simple payroll system</h2>
+                <h4>A basic payroll system to calculate gross and net pay.</h4>  
+            </div> 
+        </a>
+
+    </div>
+
+    <script src="js/index.js"></script>
+    
+</body>
+</html>

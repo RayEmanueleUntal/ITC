@@ -1,0 +1,330 @@
+
+/* General page styling */
+body, html {
+margin: 0;
+padding: 0;
+font-family: 'Montserrat';
+overflow-x: hidden;
+font-size: 16px;
+}
+
+button, input, a {
+    font-family: 'Montserrat';
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 20px;
+    padding-block: 5px;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 30px rgba(153, 52, 52, 0.1);
+    transition: all 0.25s ease;
+}
+
+.navbar-transparent {
+    background: transparent;
+    box-shadow: none;
+}
+
+.navbar-menu, .navbar li {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin-right: 40px;
+    padding: 0;
+}
+
+.navbar li {
+    position: relative;
+    width: auto;
+}
+
+.navbar a.initial-color {
+color: white;
+}
+
+.navbar a {
+    color: #5e4b96;
+    display: block;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+/* Dropdown Menu */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    width: 220px;
+    padding: 100px;
+}
+
+.dropdown-menu-space {
+    height: 30px;
+}
+
+.dropdown-menu-items {
+    background: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(12px); 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); 
+}
+
+.navbar-menu li:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    color: #778086;
+    font-size: 16px;
+    text-align: left;
+    transition: background 0.3s, color 0.3s ease;
+    display: block;
+    margin: 0;
+    padding: 20px;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(94, 75, 150, 0.15); /* Soft hover effect */
+    color: #5e4b96;
+}
+
+/* The background image container */
+.backgroundImage {
+position: fixed;  
+top: 0;
+left: 0;
+width: 100vw;    
+height: 100vh;   
+background-image: url('../assets/media/addu_gradient.png');
+background-size: cover; 
+background-attachment: fixed; 
+background-position: top center;
+z-index: -1; 
+}
+
+/* Upper container (title section) */
+.front {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+background: rgba(0, 0, 0, 0); /* A transparent overlay to make text readable */
+}
+
+.front-content {
+    height: 60vh;
+    max-height: 60vh;
+    width: 70vw;
+    padding: 70px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+}
+
+.front-content h4 {
+    font-size: 1.2rem;
+    /* font-size: 1vw; */
+    font-weight: normal;
+    max-width: 55%;
+    color: #5e4b96;
+}
+
+.front-content h1 {
+    /* font-size: 6rem; */
+    font-size: 6vw;
+    text-wrap: wrap;
+    max-width: 55%;
+    margin: 0;
+    font-weight: bold;
+    color: #5e4b96;
+    line-height: 1.1
+}
+
+.front-content #my-itc {
+    color: white;
+}
+
+.front-content h5 {
+    font-size: 1.2rem;
+    color: #724bb2;
+    font-weight: normal;
+}
+
+@media (max-width: 1024px) {
+    .front-content h1, .front-content h5 {
+        max-width: 90%;
+    }
+
+    .front-content h1 {
+        font-size: 4rem;
+    }
+
+    .front-content h5 {
+        font-size: 1rem;
+    }
+}
+
+.front-content #front-get-started-btn {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #5e4b96;
+    padding-block: 0.5rem;
+    padding-inline: 2rem;
+    border-width: 0.2rem;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #5e4b96;
+    background: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.front-content #front-get-started-btn:hover {
+    background: #5e4b96;
+    color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+.front #down-arrow {
+    background: none;
+    border: none;
+    position: absolute;
+    bottom: 3%;
+    cursor: pointer;
+}
+
+.front #down-arrow #icon-down-arrow {
+    color: rgba(0, 0, 0, 0);
+    font-size: 3rem;
+}
+
+.front #down-arrow #icon-down-arrow.icon-initial-color {
+    color: white;
+}
+
+/* Main content (lower section) */
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    min-height: 85vh; 
+    height: auto;
+    background: #e7e8ed;
+    overflow: hidden;
+}
+
+.assignment-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 685px;
+    height: 230px;
+    margin: 20px;
+    background: #e7e8ed;
+    border: none;
+    border-radius: 15px;
+    padding-inline: 40px;
+    cursor: pointer;
+    box-shadow: 
+    -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2), 
+    inset -7px -7px 20px 0 rgba(255, 255, 255, 0),
+    inset 7px 7px 20px 0 rgba(0, 0, 0, 0.0);
+    transition: box-shadow 0.75s ease;
+}
+
+.assignment-btn:hover {
+    box-shadow: 
+    7px -7px 20px 0 rgba(255, 255, 255, 0),
+    7px 7px 20px 0 rgba(0, 0, 0, 0),
+    inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.assignment-labels {
+    flex-direction: column;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+.assignment-labels h2 {
+    font-size: 1.7rem;
+    text-transform: capitalize;
+}
+
+.assignment-labels h4 {
+    margin-top: -10px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: #9fa5b6;
+}
+
+.assignment-btn .material-icons {
+    font-size: 100px;
+    padding: 0;
+    display: block;
+}
+
+#conversionCalcBTN h2, #conversionCalcBTN .material-icons {
+    color: #5462ab;
+}
+
+#incomeTaxCalcBTN h2, #incomeTaxCalcBTN .material-icons {
+    color: #5462ab;
+}
+
+#factSumAvgCalcBTN h2, #factSumAvgCalcBTN .material-icons {
+    color: #885da2;
+}
+
+#simplePayrollSysBTN h2, #simplePayrollSysBTN .material-icons {
+    color: #9b6096;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(assets/fonts/Montserrat-Bold.otf) format(opentype);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(assets/fonts/Montserrat-Regular.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}

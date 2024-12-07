@@ -1,0 +1,302 @@
+/* Hide arrows in Chrome, Safari, and Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide arrows in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* General page styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    overflow-x: hidden;
+    font-size: 16px;
+    background: #e7e8ed;
+    height: 100%;
+}
+
+button, input {
+    font-family: 'Montserrat';
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 20px;
+    padding-block: 5px;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-menu, .navbar li {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin-right: 40px;
+    padding: 0;
+}
+
+.navbar li {
+    position: relative;
+    width: auto;
+}
+
+.navbar a {
+    color: #5e4b96;
+    display: block;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+/* Dropdown Menu */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    width: 220px;
+    padding: 100px;
+}
+
+.dropdown-menu-space {
+    height: 30px;
+}
+
+.dropdown-menu-items {
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(12px); 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); 
+}
+
+.navbar-menu li:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    color: #778086;
+    font-size: 16px;
+    text-align: left;
+    transition: background 0.3s, color 0.3s ease;
+    display: block;
+    margin: 0;
+    padding: 20px;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(94, 75, 150, 0.15); /* Soft hover effect */
+    color: #5e4b96;
+}
+
+
+/* Title Section */
+
+.title-container {
+    width: 100vw;
+    margin-top: 150px;
+    text-align: center;
+    justify-content: center;
+}
+
+.title-container h1 {
+    font-style: bold;
+    font-size: 3.5rem;
+    background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.title-container h1:hover {
+    background: linear-gradient(to left, #f32170, #ff6b08,#cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+
+/* Main Content */
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-inline: 100px;
+}
+
+.button-section {
+    align-self: flex-end;
+
+}
+
+.operation-button {
+    width: 200px;
+    height: 50px;
+    border: none;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: white;
+    box-shadow:
+    inset -4px -4px 10px 0 rgba(0, 0, 0, 0.3),
+    inset 4px 4px 10px 0 rgba(255, 255, 255, 0.3),
+    inset 4px 4px 15px 0 rgba(0, 0, 0, 0),
+    inset -4px -4px 10px 0 rgba(255, 255, 255, 0);
+    transition: box-shadow 0.5s ease;
+}
+
+#add-entry-button {
+    background: #6910f8;
+
+}
+
+#remove-entry-button {
+    background: #d40f72;
+}
+
+.table-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    color: #778086;
+}
+
+td, th {
+    padding: 15px;
+}
+
+thead {
+    background: #a3a6b6;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #dfdfe4;
+}
+
+tr:nth-child(odd) {
+    background: none;
+}
+
+
+/* Add Entry Popup */
+
+.popup-section {
+    border: none;
+    background-color: rgba(223, 223, 228, 0.85);
+    backdrop-filter: blur(12px); 
+    padding: 50px;
+    border-radius: 20px;
+    color: #9fa5b6;
+    left: 25%;
+    right: 25%;
+    top: 15%;
+}
+
+.popup-section::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#add-entry-section {
+    position: fixed;
+}
+
+#remove-entry-section {
+    position: fixed;
+    width: 50%;
+}
+
+.popup-section h2 {
+    font-size: 2rem;
+}
+
+.popup-section input {
+    outline: none;
+    margin-block: 20px;
+    border: none;
+    font-size: 1.5rem;
+    background: none;
+    color: #a3a6b6;
+    width: 50%;
+    max-width: 90%; 
+    box-shadow: 
+    inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2),
+    -7px -7px 20px 0 rgba(255, 255, 255, 0),
+    7px 7px 20px 0 rgba(0, 0, 0, 0);  
+    transition: box-shadow 0.5s ease;
+    border-radius: 16px;
+    padding: 10px 20px 10px 20px;
+    font-size: 1.2rem;
+}
+
+.add-entry-input-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-entry-button-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.add-entry-button-section .confirmation-button {
+    background: #6910f8;
+}
+
+.cancel-button {
+    background: none;
+    color: #a3a6b6;
+    box-shadow: 
+    -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.remove-entry-content-section {
+    display: flex;
+    align-items: center;
+}
+
+.remove-entry-content-section input {
+    margin: 15px;
+    width: 15%;
+}
+
+.remove-entry-content-section .confirmation-button {
+    background: #d40f72;
+}
