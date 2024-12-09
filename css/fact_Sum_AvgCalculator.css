@@ -155,7 +155,8 @@ button, input {
 /* Main Content's Input Area */
 
 #input-section {
-    width: 65%;
+    width: auto;
+    max-width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -257,7 +258,7 @@ button, input {
 .pneumorphic-section {
     box-sizing: border-box;
     margin: 2vw;
-    width: 450px;
+    width: 30vw;
     height: 450px;
     padding-block: 20px;
     padding-inline: 40px;
@@ -284,8 +285,88 @@ button, input {
     color: #f8b25e;
 }
 
-@media (max-width: 1500px) {
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media (max-width: 1024px) {
+
+    .title-container h1 {
+        font-size: 2rem;
+    }
+
+
+    #input-section h4 {
+        font-size: 1rem;
+    }
+
+    .input-container input {
+        font-size: 1.1rem;
+    }
+
+    .operation-button {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .title-container {
+        padding-inline: 10px;
+    }
+
+    .title-container h1 {
+        font-size: 1.5rem;
+    }
+
+    #input-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-container, #calculate-button, #clear-button {
+        margin-inline: 0;
+        margin-bottom: 10px;
+    }
+
+    #input-section h4 {
+        font-size: 0.8rem;
+    }
+
+    .input-container input {
+        font-size: 0.9rem;
+    }
+
+    .operation-button {
+        font-size: 0.8rem;
+    }
+
     #output-section {
         flex-direction: column;
     }
+
+    .pneumorphic-section {
+        width: 90vw;
+        height: auto;
+    }
+
+    .pneumorphic-section h2 {
+        font-size: 1rem;
+    }
+    
 }
