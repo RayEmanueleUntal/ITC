@@ -239,7 +239,7 @@ button, input {
     font-style: normal;
 }
 
-@media (max-width: 1024px), (max-height: 700px) {
+@media (max-width: 1024px){
 
     .title-container h1 {
         font-size: 2rem;
@@ -272,7 +272,7 @@ button, input {
     
 }
 
-@media (max-width: 768px), (max-height: 768px) {
+@media (max-width: 768px) {
 
     .navbar a {
         font-size: 14px;
