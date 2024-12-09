@@ -322,7 +322,7 @@ tr:nth-child(even) {
     font-style: normal;
 }
 
-@media (max-width: 1024px), (max-height: 700px) {
+@media (max-width: 1024px) {
 
     .title-container h1 {
         font-size: 2rem;
