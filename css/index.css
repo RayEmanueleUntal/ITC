@@ -119,26 +119,26 @@ color: white;
 
 /* The background image container */
 .backgroundImage {
-position: fixed;  
-top: 0;
-left: 0;
-width: 100vw;    
-height: 100vh;   
-background-image: url('../assets/media/addu_gradient.png');
-background-size: cover; 
-background-attachment: fixed; 
-background-position: top center;
-z-index: -1; 
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 100vw;    
+    height: 100vh;   
+    background-image: url('../assets/media/addu_gradient.png');
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: top center;
+    z-index: -1; 
 }
 
 /* Upper container (title section) */
 .front {
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-color: white;
-background: rgba(0, 0, 0, 0); /* A transparent overlay to make text readable */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgba(0, 0, 0, 0); /* A transparent overlay to make text readable */
 }
 
 .front-content {
@@ -181,19 +181,6 @@ background: rgba(0, 0, 0, 0); /* A transparent overlay to make text readable */
     font-weight: normal;
 }
 
-@media (max-width: 1024px) {
-    .front-content h1, .front-content h5 {
-        max-width: 90%;
-    }
-
-    .front-content h1 {
-        font-size: 4rem;
-    }
-
-    .front-content h5 {
-        font-size: 1rem;
-    }
-}
 
 .front-content #front-get-started-btn {
     text-transform: uppercase;
@@ -318,14 +305,103 @@ background: rgba(0, 0, 0, 0); /* A transparent overlay to make text readable */
 
 @font-face {
     font-family: 'Montserrat';
-    src: URL("../assets/fonts/Montserrat-Bold.otf") format(opentype);
+    src: url("../assets/fonts/Montserrat-Bold.otf") format("opentype");
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: URL("../assets/fonts/Montserrat-Regular.otf") format(opentype);
+    src: url("../assets/fonts/Montserrat-Regular.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
+}
+
+@media (max-width: 1024px), (max-height: 700px) {
+
+    .front-content {
+        height: auto;
+    }
+
+    .front-content h1, .front-content h5 {
+        max-width: 90%;
+    }
+
+    .front-content h1 {
+        font-size: 4rem;
+    }
+
+    .front-content h5 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px), (max-height: 768px) {
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .front-content {
+        height: auto;
+        max-height: 60vh;
+        width: 70vw;
+        padding: 30px;
+        border-radius: 12px;
+        
+    }
+
+    .front-content h1 {
+        font-size: 30px;
+    }
+
+    .front-content h4 {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .front-content h5 {
+        font-size: 12px;
+    }
+
+    .front-content #front-get-started-btn {
+        font-size: 12px;
+        color: #5e4b96;
+        padding-block: 5px;
+        padding-inline: 20px;
+        border-width: 0.15rem;
+        border-radius: 12px;
+    }
+
+    .front #down-arrow #icon-down-arrow {
+        font-size: 2rem;
+    }
+
+    .content {
+        align-items:flex-start;
+    }
+
+    .assignment-btn {
+        height: 20vh;
+        max-height: auto;
+        width: 90vw;
+        box-shadow: 
+        -3px -3px 20px 0 rgba(255, 255, 255, 0.7),
+        3px 3px 20px 0 rgba(0, 0, 0, 0.2), 
+        inset -3px -3px 20px 0 rgba(255, 255, 255, 0),
+        inset 3px 3px 20px 0 rgba(0, 0, 0, 0.0);
+    }
+
+    .assignment-labels h2 {
+        font-size: 1rem;
+    }
+
+    .assignment-labels h4 {
+        font-size: 0.8rem;
+    }
+
+    .assignment-btn .material-icons {
+        font-size: 50px;
+    }
+
 }
