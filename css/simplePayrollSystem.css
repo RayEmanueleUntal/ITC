@@ -222,9 +222,6 @@ tr:nth-child(odd) {
     padding: 50px;
     border-radius: 20px;
     color: #9fa5b6;
-    left: 25%;
-    right: 25%;
-    top: 15%;
 }
 
 .popup-section::backdrop {
@@ -248,7 +245,6 @@ tr:nth-child(odd) {
     outline: none;
     margin-block: 20px;
     border: none;
-    font-size: 1.5rem;
     background: none;
     color: #a3a6b6;
     width: 50%;
@@ -299,4 +295,39 @@ tr:nth-child(odd) {
 
 .remove-entry-content-section .confirmation-button {
     background: #d40f72;
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media (max-width: 1024px) {
+
+    .title-container h1 {
+        font-size: 2rem;
+    }
+
+    .operation-button {
+        font-size: 1rem;
+    }
+
+    .popup-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .popup-section input {
+        font-size: 1rem;
+    }
+
 }
